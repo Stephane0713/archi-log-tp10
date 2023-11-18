@@ -1,6 +1,7 @@
 package strgame;
 
 import strgame.memento.CharacterMemento;
+import strgame.observer.Observable;
 import strgame.observer.Observer;
 import strgame.state.State;
 import strgame.strategy.CombatBehavior;
@@ -8,7 +9,7 @@ import strgame.strategy.CombatBehavior;
 import java.util.ArrayList;
 import java.util.List;
 
-public class STRCharacter {
+public class STRCharacter implements Observable {
     private int healthPoints;
 
     private State state;
@@ -36,18 +37,16 @@ public class STRCharacter {
 
     /** OBSERVER */
     public void addObserver(Observer o) {
-
-        //TODO à compléter. On ajoute un observateur à la liste
+        observers.add(o);
     }
 
     public void removeObserver(Observer o) {
-
-        //TODO à compléter. On retire un observateur de la liste
+        observers.remove(o);
     }
 
     public void notifyObservers(String event) {
         for (Observer observer : observers) {
-           // TODO à compléter. Il faut déclencher une mise à jour de chaque observateur
+           observer.update(event);
         }
     }
 
