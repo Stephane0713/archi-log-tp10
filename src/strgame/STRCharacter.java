@@ -73,5 +73,6 @@ public class STRCharacter implements Observable {
 
     public void restaureHPFromMemento(CharacterMemento memento) {
         // TODO à compléter. On récupère les points de vie du memento et on redonne au personnage ce nombre de PV
+        this.healthPoints = memento.getHealthPoints();
     }
 }
