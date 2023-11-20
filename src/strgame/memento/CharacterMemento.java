@@ -9,11 +9,13 @@ public class CharacterMemento {
     public CharacterMemento(int healthPoints) {
 
         //TODO à compléter
+        this.healthPoints = healthPoints;
 
     }
 
     public int getHealthPoints() {
 
         // TODO à completer
+        return healthPoints;
     }
 }
