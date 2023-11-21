@@ -52,7 +52,7 @@ public class STRCharacter implements Observable {
 
     /** STATE */
     public void setState(State state) {
-        //TODO à compléter
+        this.state = state;
     }
     public State getState() {
         return state;
