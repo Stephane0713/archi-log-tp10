@@ -28,7 +28,7 @@ public class STRCharacter implements Observable {
 
     /** STRATEGY */
     public void setCombatBehavior(CombatBehavior cb) {
-        // TODO à compléter
+        this.combatBehavior = cb;
     }
 
     public void performCombat() {
