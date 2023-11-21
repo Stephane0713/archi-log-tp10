@@ -9,11 +9,15 @@ public class Caretaker {
 
     public void addMemento(CharacterMemento m) {
         // TODO Ajoutez le memento à la liste
+        mementoList.add(m);
     }
 
     public CharacterMemento getMemento(int index) {
         // TODO renvoyez le bon mémento
-        return null ; // à modifier
+        if (index >= 0 && index < mementoList.size()) {
+            return mementoList.get(index);
+        }
+        return null;
     }
 
 }
